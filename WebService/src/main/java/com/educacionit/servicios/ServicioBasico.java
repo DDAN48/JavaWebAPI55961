@@ -2,10 +2,10 @@ package com.educacionit.servicios;
 
 import javax.jws.WebService;
 
-@WebService
+@WebService 
 public class ServicioBasico {
 
-	public int sumar(int a, int b) {
+	public int sumar(int a, int b){
 		return a + b;
 	}
 

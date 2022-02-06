@@ -49,7 +49,7 @@ public class UsuarioImplmentacion implements DAO<Usuario, String>, ConexionMaria
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-
+		
 		return usuario;
 	}
 

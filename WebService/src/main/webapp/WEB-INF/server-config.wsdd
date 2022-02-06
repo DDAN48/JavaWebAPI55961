@@ -29,15 +29,15 @@
   <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
  </ns1:service>
  <ns1:service name="UsuarioServicio" provider="java:RPC" style="wrapped" use="literal">
-  <ns3:operation name="listar" qname="ns1:listar" returnQName="ns1:listarReturn" returnType="ns2:Usuario" soapAction="" xmlns:ns1="http://servicios.educacionit.com" xmlns:ns2="http://entidades.educacionit.com" xmlns:ns3="http://xml.apache.org/axis/wsdd/"/>
-  <ns1:operation name="agregar" qname="ns3:agregar" returnQName="ns3:agregarReturn" returnType="xsd:boolean" soapAction="" xmlns:ns3="http://servicios.educacionit.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns3:usuario" type="ns4:Usuario" xmlns:ns4="http://entidades.educacionit.com"/>
+  <ns2:operation name="agregar" qname="ns1:agregar" returnQName="ns1:agregarReturn" returnType="xsd:boolean" soapAction="" xmlns:ns1="http://servicios.educacionit.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns3:parameter qname="ns1:usuario" type="ns2:Usuario" xmlns:ns2="http://entidades.educacionit.com" xmlns:ns3="http://xml.apache.org/axis/wsdd/"/>
+  </ns2:operation>
+  <ns1:operation name="listar" qname="ns3:listar" returnQName="ns3:listarReturn" returnType="ns4:Usuario" soapAction="" xmlns:ns3="http://servicios.educacionit.com" xmlns:ns4="http://entidades.educacionit.com"/>
+  <ns1:operation name="eliminar" qname="ns5:eliminar" returnQName="ns5:eliminarReturn" returnType="xsd:boolean" soapAction="" xmlns:ns5="http://servicios.educacionit.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:usuario" type="ns6:Usuario" xmlns:ns6="http://entidades.educacionit.com"/>
   </ns1:operation>
-  <ns1:operation name="buscar" qname="ns5:buscar" returnQName="ns5:buscarReturn" returnType="ns6:Usuario" soapAction="" xmlns:ns5="http://servicios.educacionit.com" xmlns:ns6="http://entidades.educacionit.com">
-   <ns1:parameter qname="ns5:correo" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-  </ns1:operation>
-  <ns1:operation name="eliminar" qname="ns7:eliminar" returnQName="ns7:eliminarReturn" returnType="xsd:boolean" soapAction="" xmlns:ns7="http://servicios.educacionit.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns7:usuario" type="ns8:Usuario" xmlns:ns8="http://entidades.educacionit.com"/>
+  <ns1:operation name="buscar" qname="ns7:buscar" returnQName="ns7:buscarReturn" returnType="ns8:Usuario" soapAction="" xmlns:ns7="http://servicios.educacionit.com" xmlns:ns8="http://entidades.educacionit.com">
+   <ns1:parameter qname="ns7:correo" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="eliminar buscar listar agregar"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>

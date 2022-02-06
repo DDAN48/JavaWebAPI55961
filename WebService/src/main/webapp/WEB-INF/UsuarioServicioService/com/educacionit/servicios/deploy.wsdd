@@ -10,16 +10,16 @@
       <parameter name="className" value="com.educacionit.servicios.UsuarioServicio"/>
       <parameter name="wsdlPortType" value="UsuarioServicio"/>
       <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://servicios.educacionit.com" xmlns:retNS="http://servicios.educacionit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="agregar" qname="operNS:agregar" returnQName="retNS:agregarReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://servicios.educacionit.com" xmlns:tns="http://entidades.educacionit.com" qname="pns:usuario" type="tns:Usuario"/>
+      </operation>
       <operation xmlns:operNS="http://servicios.educacionit.com" xmlns:retNS="http://servicios.educacionit.com" xmlns:rtns="http://entidades.educacionit.com" name="listar" qname="operNS:listar" returnQName="retNS:listarReturn" returnType="rtns:Usuario" soapAction="">
       </operation>
-      <operation xmlns:operNS="http://servicios.educacionit.com" xmlns:retNS="http://servicios.educacionit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="agregar" qname="operNS:agregar" returnQName="retNS:agregarReturn" returnType="rtns:boolean" soapAction="">
+      <operation xmlns:operNS="http://servicios.educacionit.com" xmlns:retNS="http://servicios.educacionit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="eliminar" qname="operNS:eliminar" returnQName="retNS:eliminarReturn" returnType="rtns:boolean" soapAction="">
         <parameter xmlns:pns="http://servicios.educacionit.com" xmlns:tns="http://entidades.educacionit.com" qname="pns:usuario" type="tns:Usuario"/>
       </operation>
       <operation xmlns:operNS="http://servicios.educacionit.com" xmlns:retNS="http://servicios.educacionit.com" xmlns:rtns="http://entidades.educacionit.com" name="buscar" qname="operNS:buscar" returnQName="retNS:buscarReturn" returnType="rtns:Usuario" soapAction="">
         <parameter xmlns:pns="http://servicios.educacionit.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:correo" type="tns:string"/>
-      </operation>
-      <operation xmlns:operNS="http://servicios.educacionit.com" xmlns:retNS="http://servicios.educacionit.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="eliminar" qname="operNS:eliminar" returnQName="retNS:eliminarReturn" returnType="rtns:boolean" soapAction="">
-        <parameter xmlns:pns="http://servicios.educacionit.com" xmlns:tns="http://entidades.educacionit.com" qname="pns:usuario" type="tns:Usuario"/>
       </operation>
       <parameter name="allowedMethods" value="eliminar buscar listar agregar"/>
 
