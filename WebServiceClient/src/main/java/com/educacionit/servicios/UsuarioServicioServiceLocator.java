@@ -22,7 +22,7 @@ public class UsuarioServicioServiceLocator extends org.apache.axis.client.Servic
     }
 
     // Use to get a proxy class for UsuarioServicio
-    private java.lang.String UsuarioServicio_address = "http://localhost:8080/WebService/services/UsuarioServicio";
+    private java.lang.String UsuarioServicio_address = "http://localhost:8081/WebService/services/UsuarioServicio";
 
     public java.lang.String getUsuarioServicioAddress() {
         return UsuarioServicio_address;

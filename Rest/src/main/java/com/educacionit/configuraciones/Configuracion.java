@@ -11,4 +11,4 @@ public class Configuracion extends ResourceConfig {
 		packages("com.educacionit.servicios");
 	}
 
-}
+}          

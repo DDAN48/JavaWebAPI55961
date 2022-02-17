@@ -44,28 +44,28 @@ public class UsuarioServicioProxy implements com.educacionit.servicios.UsuarioSe
     return usuarioServicio;
   }
   
-  public com.educacionit.entidades.Usuario[] listar() throws java.rmi.RemoteException{
-    if (usuarioServicio == null)
-      _initUsuarioServicioProxy();
-    return usuarioServicio.listar();
-  }
-  
   public boolean agregar(com.educacionit.entidades.Usuario usuario) throws java.rmi.RemoteException{
     if (usuarioServicio == null)
       _initUsuarioServicioProxy();
     return usuarioServicio.agregar(usuario);
   }
   
-  public com.educacionit.entidades.Usuario buscar(java.lang.String correo) throws java.rmi.RemoteException{
+  public com.educacionit.entidades.Usuario[] listar() throws java.rmi.RemoteException{
     if (usuarioServicio == null)
       _initUsuarioServicioProxy();
-    return usuarioServicio.buscar(correo);
+    return usuarioServicio.listar();
   }
   
   public boolean eliminar(com.educacionit.entidades.Usuario usuario) throws java.rmi.RemoteException{
     if (usuarioServicio == null)
       _initUsuarioServicioProxy();
     return usuarioServicio.eliminar(usuario);
+  }
+  
+  public com.educacionit.entidades.Usuario buscar(java.lang.String correo) throws java.rmi.RemoteException{
+    if (usuarioServicio == null)
+      _initUsuarioServicioProxy();
+    return usuarioServicio.buscar(correo);
   }
   
   

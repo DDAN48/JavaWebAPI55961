@@ -29,17 +29,9 @@ public class Usuario  implements java.io.Serializable {
            this.fechaActualizacion = fechaActualizacion;
            this.fechaCreacion = fechaCreacion;
     }
-    
-    
 
 
-    @Override
-	public String toString() {
-		return "Usuario [clave=" + clave + ", correo=" + correo + ", fechaActualizacion=" + fechaActualizacion
-				+ ", fechaCreacion=" + fechaCreacion + "]";
-	}
-
-	/**
+    /**
      * Gets the clave value for this Usuario.
      * 
      * @return clave
@@ -169,7 +161,6 @@ public class Usuario  implements java.io.Serializable {
         return _hashCode;
     }
 
-    
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
         new org.apache.axis.description.TypeDesc(Usuario.class, true);
@@ -228,8 +219,6 @@ public class Usuario  implements java.io.Serializable {
            java.lang.String mechType, 
            java.lang.Class _javaType,  
            javax.xml.namespace.QName _xmlType) {
-    	
-    	System.out.println("Error");
         return 
           new  org.apache.axis.encoding.ser.BeanDeserializer(
             _javaType, _xmlType, typeDesc);

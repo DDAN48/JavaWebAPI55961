@@ -22,8 +22,18 @@ public interface ConexionMariaDB {
 			String URL = propiedades.getProperty("URL");
 			String USER = propiedades.getProperty("USER");
 			String PASS = propiedades.getProperty("PASS");
-
-			Class.forName(propiedades.getProperty("driver"));
+			
+			/*String URL = "jdbc:mysql://localhost:3306/javawebApi559961";
+			String USER = "root";
+			String PASS = "123456";
+			String driver="com.mysql.cj.jdbc.Driver";*/
+					
+			
+			
+			
+			
+		Class.forName(propiedades.getProperty("driver"));
+			//	Class.forName(driver);
 			conexion = DriverManager.getConnection(URL, USER, PASS);
 		} catch (SQLException e) {
 			e.printStackTrace();

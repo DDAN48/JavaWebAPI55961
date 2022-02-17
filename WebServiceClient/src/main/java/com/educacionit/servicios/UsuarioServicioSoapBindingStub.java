@@ -24,15 +24,6 @@ public class UsuarioServicioSoapBindingStub extends org.apache.axis.client.Stub 
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("listar");
-        oper.setReturnType(new javax.xml.namespace.QName("http://entidades.educacionit.com", "Usuario"));
-        oper.setReturnClass(com.educacionit.entidades.Usuario[].class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "listarReturn"));
-        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[0] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
         oper.setName("agregar");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://servicios.educacionit.com", "usuario"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://entidades.educacionit.com", "Usuario"), com.educacionit.entidades.Usuario.class, false, false);
         oper.addParameter(param);
@@ -41,18 +32,16 @@ public class UsuarioServicioSoapBindingStub extends org.apache.axis.client.Stub 
         oper.setReturnQName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "agregarReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[1] = oper;
+        _operations[0] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("buscar");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://servicios.educacionit.com", "correo"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
-        oper.addParameter(param);
+        oper.setName("listar");
         oper.setReturnType(new javax.xml.namespace.QName("http://entidades.educacionit.com", "Usuario"));
-        oper.setReturnClass(com.educacionit.entidades.Usuario.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "buscarReturn"));
+        oper.setReturnClass(com.educacionit.entidades.Usuario[].class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "listarReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[2] = oper;
+        _operations[1] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("eliminar");
@@ -61,6 +50,17 @@ public class UsuarioServicioSoapBindingStub extends org.apache.axis.client.Stub 
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         oper.setReturnClass(boolean.class);
         oper.setReturnQName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "eliminarReturn"));
+        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+        oper.setUse(org.apache.axis.constants.Use.LITERAL);
+        _operations[2] = oper;
+
+        oper = new org.apache.axis.description.OperationDesc();
+        oper.setName("buscar");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://servicios.educacionit.com", "correo"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.addParameter(param);
+        oper.setReturnType(new javax.xml.namespace.QName("http://entidades.educacionit.com", "Usuario"));
+        oper.setReturnClass(com.educacionit.entidades.Usuario.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "buscarReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[3] = oper;
@@ -169,46 +169,12 @@ public class UsuarioServicioSoapBindingStub extends org.apache.axis.client.Stub 
         }
     }
 
-    public com.educacionit.entidades.Usuario[] listar() throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[0]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "listar"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (com.educacionit.entidades.Usuario[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (com.educacionit.entidades.Usuario[]) org.apache.axis.utils.JavaUtils.convert(_resp, com.educacionit.entidades.Usuario[].class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
     public boolean agregar(com.educacionit.entidades.Usuario usuario) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[1]);
+        _call.setOperation(_operations[0]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -237,23 +203,23 @@ public class UsuarioServicioSoapBindingStub extends org.apache.axis.client.Stub 
 }
     }
 
-    public com.educacionit.entidades.Usuario buscar(java.lang.String correo) throws java.rmi.RemoteException {
+    public com.educacionit.entidades.Usuario[] listar() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[2]);
+        _call.setOperation(_operations[1]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "buscar"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "listar"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {correo});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -261,9 +227,9 @@ public class UsuarioServicioSoapBindingStub extends org.apache.axis.client.Stub 
         else {
             extractAttachments(_call);
             try {
-                return (com.educacionit.entidades.Usuario) _resp;
+                return (com.educacionit.entidades.Usuario[]) _resp;
             } catch (java.lang.Exception _exception) {
-                return (com.educacionit.entidades.Usuario) org.apache.axis.utils.JavaUtils.convert(_resp, com.educacionit.entidades.Usuario.class);
+                return (com.educacionit.entidades.Usuario[]) org.apache.axis.utils.JavaUtils.convert(_resp, com.educacionit.entidades.Usuario[].class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -276,7 +242,7 @@ public class UsuarioServicioSoapBindingStub extends org.apache.axis.client.Stub 
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[3]);
+        _call.setOperation(_operations[2]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("");
         _call.setEncodingStyle(null);
@@ -298,6 +264,40 @@ public class UsuarioServicioSoapBindingStub extends org.apache.axis.client.Stub 
                 return ((java.lang.Boolean) _resp).booleanValue();
             } catch (java.lang.Exception _exception) {
                 return ((java.lang.Boolean) org.apache.axis.utils.JavaUtils.convert(_resp, boolean.class)).booleanValue();
+            }
+        }
+  } catch (org.apache.axis.AxisFault axisFaultException) {
+  throw axisFaultException;
+}
+    }
+
+    public com.educacionit.entidades.Usuario buscar(java.lang.String correo) throws java.rmi.RemoteException {
+        if (super.cachedEndpoint == null) {
+            throw new org.apache.axis.NoEndPointException();
+        }
+        org.apache.axis.client.Call _call = createCall();
+        _call.setOperation(_operations[3]);
+        _call.setUseSOAPAction(true);
+        _call.setSOAPActionURI("");
+        _call.setEncodingStyle(null);
+        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+        _call.setOperationName(new javax.xml.namespace.QName("http://servicios.educacionit.com", "buscar"));
+
+        setRequestHeaders(_call);
+        setAttachments(_call);
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {correo});
+
+        if (_resp instanceof java.rmi.RemoteException) {
+            throw (java.rmi.RemoteException)_resp;
+        }
+        else {
+            extractAttachments(_call);
+            try {
+                return (com.educacionit.entidades.Usuario) _resp;
+            } catch (java.lang.Exception _exception) {
+                return (com.educacionit.entidades.Usuario) org.apache.axis.utils.JavaUtils.convert(_resp, com.educacionit.entidades.Usuario.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
