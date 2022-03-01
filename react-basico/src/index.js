@@ -15,6 +15,7 @@ import Formulario from "./Componentes/Formulario"
 ReactDOM.render(
   <React.StrictMode>
 <Formulario/>
+<App/>
 
 
 {

@@ -1,4 +1,6 @@
-import React from "react"
+import React from "react";
+import './recursos/CSS/button.css';
+import './recursos/CSS/form.css';
 
 export default class Formulario extends React.Component{
 
@@ -88,8 +90,8 @@ render(){
        />
 
     <div>
-        <button type="submit">Agregar</button>
-        <button onClick={this.limpiarValoresFormulario} type="reset">Limpiar Formulario</button>
+        <button className="success" type="submit">Agregar</button>
+        <button className="warning" onClick={this.limpiarValoresFormulario} type="reset">Limpiar Formulario</button>
 
     </div>
     
