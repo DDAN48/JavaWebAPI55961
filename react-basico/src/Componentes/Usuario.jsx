@@ -12,7 +12,7 @@ export default class Usuario extends React.Component {
 
             id: this.props.id,
             email: this.props.email,
-            user_name: this.props.user_name,
+            user_name: this.props.email,
             first_name: this.props.first_name,
             last_name: this.props.last_name,
             avatar: this.props.avatar,
@@ -38,10 +38,10 @@ export default class Usuario extends React.Component {
     render(){
         return(
         <div className="tarjeta">
-            <img src={this.state.avatar}/>    
+            <img className="img" src={this.state.avatar}/>    
             <div>
             <h2>{this.state.user_name}</h2>
-            <button onClick={this.CambiarUserName} >Mostrar {this.state.mostrarEmail?"Nomnbre" : "Email"} </button>
+            <button className="boton" onClick={this.CambiarUserName} >Mostrar {this.state.mostrarEmail?"Nomnbre" : "Email"} </button>
             
             </div>
             
