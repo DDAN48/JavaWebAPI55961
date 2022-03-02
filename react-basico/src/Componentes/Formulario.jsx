@@ -35,7 +35,7 @@ asignarValoresFormularioold(NombrePropiedad,valor){
 
 enviarValoresFormulario=(e)=>{
     e.preventDefault();
-    console.log("HOLA MUNDO");
+   this.props.agregarUsuario(this.state.email,this.state.first_name,this.state.last_name)
     this.limpiarValoresFormulario();
 }
 

@@ -8,31 +8,16 @@ import Clases from './Clases';
 import Usuario from './Componentes/Usuario';
 import avatar from './Componentes/recursos/imagenes/avatar.png'
 import "./Componentes/recursos/CSS/usuario.css"
-import  Usuarios from "./Componentes/recursos/archivos/usuarios.json"
-import Formulario from "./Componentes/Formulario"
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-<Formulario/>
+
 <App/>
 
 
-{
-Usuarios.map((e) => 
 
-
-<Usuario 
-key={e.id}
-id= {e.id}
-email= {e.email}
-user_name={e.user_name}
-first_name= {e.first_name}
-last_name= {e.last_name}
-avatar= {e.avatar}
-mostrarEmail = {e.mostrarEmail}
-
-/>  )}
                 
 
 </React.StrictMode>,
